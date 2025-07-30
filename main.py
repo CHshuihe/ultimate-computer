@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import json
+from player_date import get_player_status
 
 
 def clear_screen():
@@ -15,18 +16,12 @@ def show_hardware(hardware):
 
 with open(r'd:\MyFlie\code\ultimate-computer\player-date.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
-player_status = {
-    "计算机等级": data["player_date"]["等级"],
-    "算力": data["player_date"]["算力"],
-    "Git币": data["player_date"]["Git币"],
-    "硬件": data["player_date"]["硬件"],
-    "软件包数量": data["player_date"]["软件包数量"],
-    "技能点": data["player_date"]["技能点"],
-    "当前任务": data["player_date"]["当前任务"]
-}
+
 
 
 def print_main_screen():
+    global player_status
+    player_status = get_player_status(r'd:\MyFlie\code\ultimate-computer\player-date.json')
     clear_screen()
     print("=" * 38)
     print("  终极计算机 - ULTIMATE COMPUTER")
