@@ -13,7 +13,7 @@ def show_hardware(hardware):
         hardware_lines.append(f"  {k}: {v}")
     return "\n".join(hardware_lines)
 
-with open('player-date.json', 'r', encoding='utf-8') as f:
+with open(r'd:\MyFlie\code\ultimate-computer\player-date.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 player_status = {
     "计算机等级": data["player_date"]["等级"],
