@@ -21,10 +21,13 @@ with open(r'd:\MyFlie\code\ultimate-computer\player-date.json', 'r', encoding='u
 
 def print_main_screen():
     global player_status
+    global version
     player_status = get_player_status(r'd:\MyFlie\code\ultimate-computer\player-date.json')
+    version = data["Version"]
     clear_screen()
     print("=" * 38)
     print("  终极计算机 - ULTIMATE COMPUTER")
+    print(f"  版本: {version}")
     print("=" * 38)
     print(f"  计算机等级: {player_status['计算机等级']}   算力: {player_status['算力']}")
     print(f"  Git币: {player_status['Git币']}          软件包数: {player_status['软件包数量']}")
