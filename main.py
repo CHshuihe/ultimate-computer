@@ -29,19 +29,12 @@ def print_main_screen():
     print("  终极计算机 - ULTIMATE COMPUTER")
     print(f"  版本: {version}")
     print("=" * 38)
-    print(f"  计算机等级: {player_status['计算机等级']}   算力: {player_status['算力']}")
-    print(f"  Git币: {player_status['Git币']}          软件包数: {player_status['软件包数量']}")
-    print(f"  技能点: {player_status['技能点']}      当前任务: {player_status['当前任务']}")
-    print("-" * 38)
-    print("【硬件配置】")
-    print(show_hardware(player_status["硬件"]))
-    print("-" * 38)
     print("【可用命令】")
-    print("  1. hardware     查看/升级硬件")
-    print("  2. software     下载/管理软件包")
-    print("  3. skill        查看/加点技能")
-    print("  4. mission      查看/接取任务")
-    print("  5. status       查看当前状态")
+    print("  1. status       查看玩家面板")
+    print("  2. hardware     查看/升级硬件")
+    print("  3. software     下载/管理软件包")
+    print("  4. skill        查看/加点技能")
+    print("  5. mission      查看/接取任务")
     print("  6. shop         商品商店")
     print("  7. help         帮助")
     print("  0. exit         退出游戏")
@@ -55,20 +48,22 @@ def main():
             print("感谢游玩终极计算机！")
             time.sleep(1)
             sys.exit(0)
-        elif choice in ['1', 'hardware']:
-            print("进入硬件管理模块...（未实现）")
+        elif choice in ['1', 'status']:
+             print(f"  计算机等级: {player_status['计算机等级']}   算力: {player_status['算力']}")
+             print(f"  Git币: {player_status['Git币']}          软件包数: {player_status['软件包数量']}")
+             print(f"  技能点: {player_status['技能点']}      当前任务: {player_status['当前任务']}")
+             input("按回车键返回主界面")
+        elif choice in ['2', 'hardware']:
+            print(show_hardware(player_status["硬件"]))
             input("按回车键返回主界面")
-        elif choice in ['2', 'software']:
+        elif choice in ['3', 'software']:
             print("进入软件管理模块...（未实现）")
             input("按回车键返回主界面")
-        elif choice in ['3', 'skill']:
+        elif choice in ['4', 'skill']:
             print("进入技能点管理模块...（未实现）")
             input("按回车键返回主界面")
-        elif choice in ['4', 'mission']:
+        elif choice in ['5', 'mission']:
             print("进入任务系统模块...（未实现）")
-            input("按回车键返回主界面")
-        elif choice in ['5', 'status']:
-            print("当前状态如下：")
             input("按回车键返回主界面")
         elif choice in ['6', 'shop']:
             print("进入商店...（未实现）")
