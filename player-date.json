@@ -1,5 +1,6 @@
 {
-  "player_date":{
+  "player_date":
+  {
   "等级": 50,
   "算力": 600,
   "Git币": 888,
@@ -13,11 +14,11 @@
     "显示器": "17寸LCD",
     "键盘":"薄膜键盘"
 
-  },
+          },
   "软件包数量": 6,
   "技能点": 20,
   "当前任务": "无"
-},
+  },
 
   "Version":"0.0.2",
 
@@ -68,15 +69,23 @@
       { "型号": "64GB", "算力": 700 }
     ]
   },
-  "软件包信息":{
-    "CPU":[
-      { "型号": "Intel i3", "算力": 100 },
-      { "型号": "Intel i5", "算力": 200 },
-      { "型号": "Intel i7", "算力": 300 },
-      { "型号": "Intel i9", "算力": 400 },
-      { "型号": "Intel X3", "算力": 500 },
-      { "型号": "Intel X5", "算力": 600 },
-      { "型号": "Intel X7", "算力": 700 }
-    ]
-  }
+  "软件包信息":[
+    {
+      "name": "分析软件",
+      "feature": "Increase code compile speed",
+      "levels": [
+        { "level": 1,"rate":1.05, "research_rate": 1.00, "exp": 0, "exp_to_next": 100 },
+        { "level": 2,"rate":1.10, "research_rate": 0.95, "exp": 0, "exp_to_next": 200 },
+        { "level": 3,"rate":1.15, "research_rate": 0.90, "exp": 0, "exp_to_next": 300 },
+        { "level": 3,"rate":1.20, "research_rate": 0.85, "exp": 0, "exp_to_next": 400 },
+        { "level": 4,"rate":1.25, "research_rate": 0.80, "exp": 0, "exp_to_next": 500 },
+        { "level": 5,"rate":1.30, "research_rate": 0.75, "exp": 0, "exp_to_next": 600 },
+        { "level": 6,"rate":1.35, "research_rate": 0.70, "exp": 0, "exp_to_next": 700 },
+        { "level": 7,"rate":1.40, "research_rate": 0.65, "exp": 0, "exp_to_next": 800 },
+        { "level": 8,"rate":1.45, "research_rate": 0.60, "exp": 0, "exp_to_next": 900 },
+        { "level": 9,"rate":1.50, "research_rate": 0.65, "exp": 0, "exp_to_next": 1000 },
+        { "level": 10,"rate":1.60, "research_rate": 0.50, "exp": 0, "exp_to_next": 1200 }
+      ]
+    },
+  ]
 }
